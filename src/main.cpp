@@ -12,4 +12,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         baseApp->show();
 
     return app.exec();
+
+    // In QtActivity.java : setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
 }

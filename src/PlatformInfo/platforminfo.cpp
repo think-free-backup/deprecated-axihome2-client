@@ -31,7 +31,7 @@ PlatformInfo::PlatformInfo(QObject *parent) : QObject(parent)
 
     // Create storage folder if doesn't exists
 
-    STORAGEPATH.append("/.acuity/");
+    STORAGEPATH.append("/.on-domo-qt/");
 
     QDir dir;
     dir.mkdir(STORAGEPATH);

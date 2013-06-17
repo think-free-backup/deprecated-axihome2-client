@@ -1,6 +1,7 @@
 import QtQuick 2.0
 
 import "../Json"
+import "Layout"
 
 Item {
 
@@ -8,10 +9,11 @@ Item {
     width: 100
     height: 62
 
-    property string current : "" //list.currentItem.text;
+    property string current : list.currentItem.text;
 
     property string places : "";
     property string moduleAssociation : ""
+    property alias index : list.currentIndex;
 
 
     ListView {
@@ -21,8 +23,10 @@ Item {
         anchors.fill: parent
         orientation : ListView.Horizontal
         snapMode: ListView.SnapOneItem
+        boundsBehavior:Flickable.StopAtBounds
         spacing: 5
         highlightRangeMode: ListView.StrictlyEnforceRange
+        highlightMoveDuration: 10
 
         JSONListModel {
 
@@ -43,5 +47,24 @@ Item {
 
             moduleAssociation: view.moduleAssociation
         }
+    }
+
+    Connections { // Back / Home Android
+
+        target: viewer
+
+        onBackKeyPressed: {
+
+            list.currentItem.back();
+        }
+
+        onMenuKeyPressed: {
+
+        }
+    }
+
+    function showPanel(){
+
+        list.currentItem.showPanel();
     }
 }

@@ -7,7 +7,7 @@ QmlBaseApplication::QmlBaseApplication(QString qmlfile, QWidget *parent) : QWidg
 
     m_qmlFile = qmlfile;
 
-    m_networkManager = new NetworkManager("localhost",this);
+    m_networkManager = new NetworkManager("10.0.0.2",this);
     m_model = new VariableModelManager(this);
         QObject::connect(m_networkManager, SIGNAL(loggedChanged(bool)), m_model, SLOT(setServerAvailable(bool)));
         QObject::connect(m_networkManager, SIGNAL(systemVariableChanged(QString,QString,QVariant)), m_model, SLOT(updateSystemVariable(QString,QString,QVariant)));
@@ -31,7 +31,9 @@ void QmlBaseApplication::show(){
     m_viewer->setMainQmlFile(m_qmlFile);
 
     if (m_osInfo->platform() != "Android"){
-        m_viewer->showFullScreen();
+        m_viewer->setHeight(600);
+        m_viewer->setWidth(800);
+        m_viewer->show();
     }
     else{
         m_viewer->showExpanded();
@@ -42,4 +44,3 @@ QQmlContext * QmlBaseApplication::getContext(){
 
     return m_viewer->rootContext();
 }
-

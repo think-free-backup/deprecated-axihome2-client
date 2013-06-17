@@ -49,6 +49,7 @@ class NodeJsCommunication : public QObject
         QTcpSocket *m_socket;
         QString m_host;
         QTimer *m_connectionCheckerTimer;
+        QString m_dataStr;
 
         // Properties
         bool m_connected;

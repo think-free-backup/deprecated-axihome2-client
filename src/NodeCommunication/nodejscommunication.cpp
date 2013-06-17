@@ -87,15 +87,25 @@ void NodeJsCommunication::messageReceived()
 {
     QByteArray datagram = m_socket->readAll();
 
-    QString dataStr(datagram);
+    m_dataStr.append(datagram);
 
-    QStringList dataList = dataStr.split(":::0:::");
+    QStringList dataList = m_dataStr.split(":::0:::");
 
     foreach (QString data, dataList) {
 
         if (data != ""){
 
-            emit jsonReceived(data);
+            if (data.contains(":::1:::")){
+
+                emit jsonReceived(data.remove(":::1:::"));
+            }
+            else{
+
+                m_dataStr = data;
+                return;
+            }
         }
     }
+
+    m_dataStr = "";
 }
