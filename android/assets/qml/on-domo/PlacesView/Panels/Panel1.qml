@@ -9,7 +9,7 @@ Item {
     property string model : ""
     property bool active : false;
 
-    signal showPanel2(string item);
+    signal showDetail(string name, string source);
 
     JSONListModel {
 
@@ -34,6 +34,18 @@ Item {
             source : "Panel1Items/" + model.module.split("-")[1] + ".qml"
             onLoaded:  {
                 panel1.active = true;
+
+                item.source = model.module
+                item.name = model.name
+
+                item.listHeight = list.height
+                item.listWidth = list.width
+            }
+
+
+            Connections {
+                target: item
+                onShowDetail: panel1.showDetail(model.name, item.source)
             }
         }
     }

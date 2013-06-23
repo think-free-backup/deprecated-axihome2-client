@@ -63,8 +63,8 @@ Item {
         }
     }
 
-    function showPanel(){
+    function back(){
 
-        list.currentItem.showPanel();
+        list.currentItem.back();
     }
 }

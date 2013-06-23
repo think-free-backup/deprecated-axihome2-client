@@ -8,7 +8,7 @@ Rectangle {
     color:"black"
 
     signal showMenu;
-    signal showPanel;
+    signal back;
 
     SwipeArea {
 
@@ -17,9 +17,9 @@ Rectangle {
         activationAreaY: parent.height/2
         mouseAreaActivated: true
 
-        onBottom:{
+        onRight:{
 
-            topBar.showPanel();
+            topBar.back();
         }
     }
 

@@ -43,7 +43,7 @@ void NetworkManager::writeVariable(QString name, QVariant value)
 
 void NetworkManager::call(QString module, QString function, QString params)
 {
-    QString str = QString("{\"type\" : \"call\", \"body\" : { \"module\" : \"%1\", \"function\" : \"%2\", \"param\" : \"[%3]\" } }")
+    QString str = QString("{\"type\" : \"call\", \"body\" : { \"module\" : \"%1\", \"function\" : \"%2\", \"param\" : [%3] } }")
             .arg(module)
             .arg(function)
             .arg(params);

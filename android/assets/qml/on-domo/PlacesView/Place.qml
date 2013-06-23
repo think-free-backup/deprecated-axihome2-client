@@ -40,26 +40,31 @@ Item {
         }
     }
 
-     Connections {
+    Connections {
 
         id:connection
 
-        onShowPanel2: {
+        onShowDetail: {
 
-            console.log("Show panel 2 requested")
+            layout.item.p2.itemName = name;
+            layout.item.p2.source = source;
+            layout.item.state = "detail"
         }
     }
 
-    function showPanel(){
+    Connections {
 
-        if (layout.item.state === "2panels")
-            layout.item.state = "3panels"
-        else
-            layout.item.state = "2panels"
+        id:connection2
+        target: layout.item.p2
+
+        onHide:{
+
+            layout.item.state = "master"
+        }
     }
 
     function back(){
 
-        console.log("Back pressed");
+        layout.item.state = "master"
     }
 }

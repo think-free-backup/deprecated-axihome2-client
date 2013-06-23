@@ -9,11 +9,13 @@ Rectangle{
 
     width: parent.width
     height:45
-    color:"#222"
+
+    property color btColor : "#333"
+    color: btColor
 
     Text {
         anchors.centerIn: parent
-        font.pixelSize: 25
+        font.pixelSize: parent.height / 2
         color: "white"
         text: parent.text
     }
@@ -37,7 +39,7 @@ Rectangle{
         State {
 
              name: "released"
-             PropertyChanges { target: button; color : "#222"}
+             PropertyChanges { target: button; color : btColor}
         },
         State {
 

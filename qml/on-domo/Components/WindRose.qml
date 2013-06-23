@@ -63,15 +63,16 @@ Item{
     property color internal : "#222"
     property color direction : "#09c"
     property color speed : "white"
-    property int radius : 200
 
+    width: 200
+    height:width
 
     Rectangle {
 
         id : mainCircle
 
-        width: parent.radius
-        height: parent.radius
+        width: parent.width
+        height: parent.width
         color: parent.circle
         radius: width*0.5
         smooth:true

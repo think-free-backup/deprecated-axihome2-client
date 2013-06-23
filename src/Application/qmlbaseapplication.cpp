@@ -7,7 +7,7 @@ QmlBaseApplication::QmlBaseApplication(QString qmlfile, QWidget *parent) : QWidg
 
     m_qmlFile = qmlfile;
 
-    m_networkManager = new NetworkManager("10.0.0.2",this);
+    m_networkManager = new NetworkManager("172.16.1.15",this);
     m_model = new VariableModelManager(this);
         QObject::connect(m_networkManager, SIGNAL(loggedChanged(bool)), m_model, SLOT(setServerAvailable(bool)));
         QObject::connect(m_networkManager, SIGNAL(systemVariableChanged(QString,QString,QVariant)), m_model, SLOT(updateSystemVariable(QString,QString,QVariant)));

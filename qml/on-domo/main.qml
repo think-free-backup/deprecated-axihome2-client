@@ -26,8 +26,6 @@ Rectangle {
 
         places : main.places
         moduleAssociation : main.moduleAssociation
-
-        onCurrentChanged: console.log ("Tab : " + current)
     }
 
     SwipeArea {
@@ -74,9 +72,9 @@ Rectangle {
             (placeList.state === "activated") ? placeList.state = "desactivated" : placeList.state = "activated"
         }
 
-        onShowPanel: {
+        onBack: {
 
-            placeView.showPanel();
+            placeView.back();
         }
     }
 

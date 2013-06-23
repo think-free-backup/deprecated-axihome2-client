@@ -7,7 +7,7 @@ Item{
 
     anchors.fill: parent
 
-    state: "2panels"
+    state: "master"
 
     property Panel1 p1 : panel1;
     property Panel2 p2 : panel2;
@@ -40,12 +40,14 @@ Item{
         id: panel2Rec
 
         anchors.top:parent.top
-        anchors.topMargin: 10
-        anchors.bottomMargin: 10
+        anchors.topMargin: 0
+        anchors.bottomMargin: 0
         anchors.left: panel1Rec.right
-        anchors.leftMargin: 10
-        height:parent.height - 20
-        width: panel1Rec.width // (parent.width / 3) - 10
+        anchors.leftMargin: - panel1.width / 2
+        height:parent.height
+        width: 1.5*panel1Rec.width + 20
+        border.color:"#111"
+        border.width: 10
 
         color:"#222"
 
@@ -53,6 +55,7 @@ Item{
 
             id:panel2
             anchors.fill: parent
+            anchors.margins: 10
         }
     }
 
@@ -89,7 +92,7 @@ Item{
     states: [
         State {
 
-             name: "2panels"
+             name: "master"
              PropertyChanges{ target: panel1Rec; width: if (panel3.active){
 
                                                              2* (parent.width / 3) - 10
@@ -103,7 +106,7 @@ Item{
         },
         State {
 
-             name: "3panels"
+             name: "detail"
              PropertyChanges { target: panel1Rec; width: if(panel3.active){
 
                                                              (parent.width / 3) - 10
