@@ -34,7 +34,7 @@ void QmlBaseApplication::show(){
 
     if (m_osInfo->platform() != "Android"){
         m_viewer->setHeight(600);
-        m_viewer->setWidth(800);
+        m_viewer->setWidth(1000);
         m_viewer->show();
     }
     else{
