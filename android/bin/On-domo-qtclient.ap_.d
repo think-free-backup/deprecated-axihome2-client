@@ -61,6 +61,7 @@
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/Device \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/Slider.qml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/Device.qml \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/DeviceDetail.qml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/IconTextUnit.qml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/Button.qml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/SwipeArea.qml \

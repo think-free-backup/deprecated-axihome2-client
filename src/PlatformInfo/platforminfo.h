@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QString>
 #include <QDir>
+#include <QSettings>
 
 #include "../Log/log.h"
 
@@ -28,7 +29,7 @@ class PlatformInfo : public QObject
 
     public:
 
-        explicit PlatformInfo(QObject *parent = 0);
+        explicit PlatformInfo(QString app, QObject *parent = 0);
 
         QString platform() const {return m_platform;}
 
@@ -37,6 +38,8 @@ class PlatformInfo : public QObject
         bool orientationPortrait() const {return m_orientationPortrait;}
 
         bool tactileScreen() const {return m_tactileScreen;}
+
+        QString getSetting(QString key, QString deflt);
 
     public slots:
 

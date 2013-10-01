@@ -56,6 +56,7 @@ Item{
             id:panel2
             anchors.fill: parent
             anchors.margins: 10
+            visible : (parent.opacity === 1.0 ) ? true : false
         }
     }
 

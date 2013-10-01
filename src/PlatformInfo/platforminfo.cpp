@@ -1,6 +1,6 @@
 #include "platforminfo.h"
 
-PlatformInfo::PlatformInfo(QObject *parent) : QObject(parent)
+PlatformInfo::PlatformInfo(QString app,QObject *parent) : QObject(parent)
 {
     // Define platform variables
 
@@ -31,7 +31,9 @@ PlatformInfo::PlatformInfo(QObject *parent) : QObject(parent)
 
     // Create storage folder if doesn't exists
 
-    STORAGEPATH.append("/.on-domo-qt/");
+    STORAGEPATH.append("/.");
+    STORAGEPATH.append(app);
+    STORAGEPATH.append("/");
 
     QDir dir;
     dir.mkdir(STORAGEPATH);
@@ -41,4 +43,11 @@ PlatformInfo::PlatformInfo(QObject *parent) : QObject(parent)
     setPlatform(OS);
     setTactileScreen(TACTIL);
     setStoragePath(STORAGEPATH);
+}
+
+QString PlatformInfo::getSetting(QString key, QString deflt){
+
+    QSettings * settings = 0;
+    settings = new QSettings( storagePath() + "config.ini", QSettings::IniFormat );
+    return settings->value( key, deflt).toString();
 }

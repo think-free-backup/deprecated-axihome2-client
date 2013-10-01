@@ -6,8 +6,11 @@ QmlBaseApplication::QmlBaseApplication(QString qmlfile, QWidget *parent) : QWidg
     qmlRegisterType<Shortcut>("org.arisnova.shortcut", 1, 0, "Shortcut");
 
     m_qmlFile = qmlfile;
+    m_osInfo = new PlatformInfo("on-domo-qt", this);
+    m_viewer = new QmlDroidViewer();
 
-    m_networkManager = new NetworkManager("172.16.1.15",this);
+    m_networkManager = new NetworkManager(m_osInfo->getSetting("serverIp", "127.0.0.1"),this);
+
     m_model = new VariableModelManager(this);
         QObject::connect(m_networkManager, SIGNAL(loggedChanged(bool)), m_model, SLOT(setServerAvailable(bool)));
         QObject::connect(m_networkManager, SIGNAL(systemVariableChanged(QString,QString,QVariant)), m_model, SLOT(updateSystemVariable(QString,QString,QVariant)));
@@ -16,8 +19,7 @@ QmlBaseApplication::QmlBaseApplication(QString qmlfile, QWidget *parent) : QWidg
 
         //m_model->localVariable("rpcActivated", false);
 
-    m_osInfo = new PlatformInfo(this);
-    m_viewer = new QmlDroidViewer();
+
 
     QQmlContext *context = m_viewer->rootContext();
         context->setContextProperty("variablesModel",m_model);

@@ -15,10 +15,11 @@ Item {
 
     signal hide();
 
-//    MouseArea{
-//        anchors.fill: parent
-//        onPressed: {}
-//    }
+    MouseArea{
+        anchors.fill: panel2
+        onPressed: {}
+        enabled : panel2.visible
+    }
 
     Text{
 
@@ -70,6 +71,8 @@ Item {
 
         onLoaded:  {
 
+            item.source = panel2.source
+            item.name = panel2.itemName
         }
     }
 }
