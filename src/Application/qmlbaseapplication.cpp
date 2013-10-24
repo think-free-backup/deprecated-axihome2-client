@@ -19,8 +19,6 @@ QmlBaseApplication::QmlBaseApplication(QString qmlfile, QWidget *parent) : QWidg
 
         //m_model->localVariable("rpcActivated", false);
 
-
-
     QQmlContext *context = m_viewer->rootContext();
         context->setContextProperty("variablesModel",m_model);
         context->setContextProperty("osInfo",m_osInfo);

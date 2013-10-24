@@ -1,6 +1,8 @@
 import QtQuick 2.0
 import "../../Components"
 
+/* Panel 2 is the detailled list of items */
+
 Item {
 
     id: panel2
