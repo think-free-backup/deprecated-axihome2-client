@@ -1,6 +1,8 @@
 import QtQuick 2.0
 import "../../Json"
 
+/* Panel 1 is the main list of items */
+
 Item {
 
     id:panel1

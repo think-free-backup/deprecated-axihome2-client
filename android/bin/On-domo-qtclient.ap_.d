@@ -44,6 +44,7 @@
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Images/bulb-off.png \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Images/humidity.png \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Images/pressure.png \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Images/note.png \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/PlacesView/Layout \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/PlacesView/Place.qml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/PlacesView/Panels \
@@ -58,6 +59,7 @@
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/PlacesView/Panels/Panel2Items/RoutingMultilevelSwitch.qml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/PlacesView/Panels/Panel1Items/RoutingMultilevelSwitch.qml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/PlacesView/Panels/Panel1Items/BinaryPowerSwitch.qml \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/PlacesView/Panels/Panel1Items/Mpdcontroler.qml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/Device \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/Slider.qml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/assets/qml/on-domo/Components/Device.qml \

@@ -14,9 +14,9 @@ DeviceDetail {
         y: parent.height - (parent.height / 40)
 
         minimum : 0
-        maximum: 255
+        maximum: 100
 
-        remoteValue: device.json.values[0].level
+        //remoteValue: device.json.values[0].level
 
         onValueChanged: {
 

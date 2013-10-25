@@ -15,6 +15,9 @@ Rectangle {
 
     property bool portrait : osInfo.orientationPortrait
 
+
+    onPlacesChanged: console.log(places)
+
     PlacesView {
 
         id : placeView

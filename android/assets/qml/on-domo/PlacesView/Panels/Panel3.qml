@@ -1,6 +1,8 @@
 import QtQuick 2.0
 import "../../Components"
 
+/* Panel 3 is the weather and scenaries panel */
+
 Item {
 
     id: panel3

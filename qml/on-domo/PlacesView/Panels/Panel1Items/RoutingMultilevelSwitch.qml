@@ -6,7 +6,7 @@ Device{
 
     id : device
 
-    property int percent : Math.floor((device.json.values[0].level / 255) * 100) ;
+    property int percent : device.json.values[0].level //Math.floor((device.json.values[0].level / 255) * 100) ;
 
     DeviceState{
 
