@@ -78,6 +78,7 @@ OTHER_FILES += \
     android/res/values-zh-rCN/strings.xml \
     android/src/org/kde/necessitas/origo/QtActivity.java \
     android/src/org/kde/necessitas/origo/QtApplication.java \
+    android/src/org/kde/necessitas/origo/QtService.java \
     android/src/org/kde/necessitas/ministro/IMinistro.aidl \
     android/src/org/kde/necessitas/ministro/IMinistroCallback.aidl \
     android/AndroidManifest.xml \

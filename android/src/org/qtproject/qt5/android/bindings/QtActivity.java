@@ -136,6 +136,25 @@ public class QtActivity extends Activity
                                                         // this repository is used to push Qt snapshots.
     private String[] m_qtLibs = null; // required qt libs
 
+    private int loadService()
+    {
+        int retVal = -1;
+        Log.w(QtApplication.QtTAG, "loadService");
+        try
+        {
+            Intent i = new Intent(this, QtService.class);
+            i.putExtra(QtService.EXTRA_MESSAGE, "Loading " + m_activityInfo.metaData.getString("android.app.lib_name"));
+            ComponentName cn = startService(i);
+            retVal = 0;
+        }
+        catch (Exception e)
+        {
+            Log.e(QtApplication.QtTAG, "Can't create service" + e);
+        }
+
+        return retVal;
+    }
+
     // this function is used to load and start the loader
     private void loadApplication(Bundle loaderParams)
     {
@@ -580,6 +599,7 @@ public class QtActivity extends Activity
             if (m_activityInfo.metaData.containsKey("android.app.splash_screen") )
                 setContentView(m_activityInfo.metaData.getInt("android.app.splash_screen"));
             startApp(true);
+            loadService();
         }
     }
     //---------------------------------------------------------------------------

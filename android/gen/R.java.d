@@ -4,10 +4,13 @@
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-it/strings.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-pt-rBR/strings.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-el/strings.xml \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/drawable-mdpi/icon.png \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/drawable/icon.png \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-nb/strings.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-ms/strings.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values/libs.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values/strings.xml \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/drawable-ldpi/icon.png \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-id/strings.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-fr/strings.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-nl/strings.xml \
@@ -18,7 +21,12 @@
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-es/strings.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-fa/strings.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-pl/strings.xml \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/drawable-hdpi/icon.png \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/layout/splash.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-ro/strings.xml \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/res/values-zh-rCN/strings.xml \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/bin/res/drawable-mdpi/icon.png \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/bin/res/drawable/icon.png \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/bin/res/drawable-ldpi/icon.png \
+/home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/bin/res/drawable-hdpi/icon.png \
 /home/christophe/Devel/Personal/on-domo-nutsy-qt-client/android/bin/AndroidManifest.xml \
