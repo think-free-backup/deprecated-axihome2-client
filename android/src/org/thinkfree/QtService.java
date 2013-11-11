@@ -12,7 +12,7 @@
     http://commonsware.com/Android
 */
 
-package org.qtproject.qt5.android.bindings;
+package org.thinkfree;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -74,7 +74,7 @@ public class QtService extends Service
                     message,
                     System.currentTimeMillis());
 
-                Intent i = new Intent(this, QtActivity.class);
+                Intent i = new Intent(this, QtServiceActivity.class);
 
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
