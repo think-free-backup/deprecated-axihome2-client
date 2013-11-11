@@ -63,7 +63,7 @@ public class QtService extends Service
     {
         if (!isRunning)
         {
-            Log.w(getClass().getName(), "Service test is running..");
+            Log.w(getClass().getName(), "Service is running..");
             isRunning = true;
 
             try
