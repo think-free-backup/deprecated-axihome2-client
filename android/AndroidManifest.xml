@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <manifest android:versionName="1.0" package="org.thinkfree.axihome" android:versionCode="1" xmlns:android="http://schemas.android.com/apk/res/android">
     <application android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="@string/app_name" android:icon="@drawable/icon">
-        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name="org.thinkfree.QtServiceActivity" android:label="@string/app_name" android:configChanges="orientation|locale|fontScale|keyboard|keyboardHidden|navigation|screenSize" android:screenOrientation="landscape" android:launchMode="singleInstance">
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name="org.thinkfree.QtServiceActivity" android:label="Axihome" android:configChanges="orientation|locale|fontScale|keyboard|keyboardHidden|navigation|screenSize" android:screenOrientation="landscape" android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
