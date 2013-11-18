@@ -13,7 +13,6 @@ import android.content.Intent;
 
 public class QtServiceActivity extends QtActivity
 {
-
     private ActivityInfo m_activityInfo = null;
 
     private int loadService()

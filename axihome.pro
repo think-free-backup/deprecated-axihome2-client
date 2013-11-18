@@ -53,6 +53,12 @@ OTHER_FILES += \
     android/AndroidManifest.xml \
     android/src/org/thinkfree/QtServiceActivity.java \
     android/src/org/thinkfree/QtService.java \
+    android/src/org/thinkfree/NFC/NdefMessageParser.java \
+    android/src/org/thinkfree/NFC/TagViewer.java \
+    android/src/org/thinkfree/NFC/record/ParsedNdefRecord.java \
+    android/src/org/thinkfree/NFC/record/SmartPoster.java \
+    android/src/org/thinkfree/NFC/record/TextRecord.java \
+    android/src/org/thinkfree/NFC/record/UriRecord.java \
     android/res/drawable-mdpi/icon.png \
     android/res/drawable-ldpi/icon.png \
     android/res/drawable-hdpi/icon.png
