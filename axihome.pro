@@ -58,7 +58,4 @@ OTHER_FILES += \
     android/src/org/thinkfree/NFC/record/ParsedNdefRecord.java \
     android/src/org/thinkfree/NFC/record/SmartPoster.java \
     android/src/org/thinkfree/NFC/record/TextRecord.java \
-    android/src/org/thinkfree/NFC/record/UriRecord.java \
-    android/res/drawable-mdpi/icon.png \
-    android/res/drawable-ldpi/icon.png \
-    android/res/drawable-hdpi/icon.png
+    android/src/org/thinkfree/NFC/record/UriRecord.java

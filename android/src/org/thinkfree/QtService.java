@@ -70,7 +70,7 @@ public class QtService extends Service
             {
                 Bundle data = getPackageManager().getServiceInfo(myService, PackageManager.GET_META_DATA).metaData;
 
-                Notification note = new Notification(data.getInt("android.app.icon"),
+                Notification note = new Notification(data.getInt("android.app.notificon"),
                     message,
                     System.currentTimeMillis());
 

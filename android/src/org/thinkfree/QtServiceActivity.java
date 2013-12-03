@@ -10,6 +10,8 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
 import android.content.Intent;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class QtServiceActivity extends QtActivity
 {
@@ -37,6 +39,11 @@ public class QtServiceActivity extends QtActivity
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
+
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         super.onCreate(savedInstanceState);
         
         try {

@@ -40,7 +40,7 @@ void NodeJsCommunication::connectionChecker()
 {
     if (m_socket->state() != QAbstractSocket::ConnectedState)
     {
-        log("Client is not connected");
+        //log("Client is not connected");
 
         this->setConnected(false);
 
@@ -49,7 +49,7 @@ void NodeJsCommunication::connectionChecker()
 
         if (m_socket->state() != QAbstractSocket::ConnectedState)
         {
-            log("Can't connect to server");
+            //log("Can't connect to server");
 
             this->setConnected(false);
         }
