@@ -22,30 +22,30 @@ include(qtquick2applicationviewer/qtquick2applicationviewer.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    src/VariableModel/systemvariable.h \
-    src/VariableModel/variablemodelmanager.h \
-    src/NodeCommunication/nodejscommunication.h \
-    src/NodeCommunication/heartbeatmanager.h \
-    src/Log/log.h \
-    src/ShortCut/shortcut.h \
-    src/PlatformInfo/platforminfo.h \
-    src/Application/qmlbaseapplication.h \
-    src/QmlViewer/qmldroidviewer.h \
-    src/NodeCommunication/networkmanager.h
+    src/Base/VariableModel/systemvariable.h \
+    src/Base/VariableModel/variablemodelmanager.h \
+    src/Base/NodeCommunication/nodejscommunication.h \
+    src/Base/NodeCommunication/heartbeatmanager.h \
+    src/Base/Log/log.h \
+    src/Base/ShortCut/shortcut.h \
+    src/Base/PlatformInfo/platforminfo.h \
+    src/Base/Application/qmlbaseapplication.h \
+    src/Base/QmlViewer/qmldroidviewer.h \
+    src/Base/NodeCommunication/networkmanager.h
 
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += \
     src/main.cpp \
-    src/VariableModel/systemvariable.cpp \
-    src/VariableModel/variablemodelmanager.cpp \
-    src/NodeCommunication/nodejscommunication.cpp \
-    src/NodeCommunication/heartbeatmanager.cpp \
-    src/Log/log.cpp \
-    src/ShortCut/shortcut.cpp \
-    src/PlatformInfo/platforminfo.cpp \
-    src/Application/qmlbaseapplication.cpp \
-    src/QmlViewer/qmldroidviewer.cpp \
-    src/NodeCommunication/networkmanager.cpp
+    src/Base/VariableModel/systemvariable.cpp \
+    src/Base/VariableModel/variablemodelmanager.cpp \
+    src/Base/NodeCommunication/nodejscommunication.cpp \
+    src/Base/NodeCommunication/heartbeatmanager.cpp \
+    src/Base/Log/log.cpp \
+    src/Base/ShortCut/shortcut.cpp \
+    src/Base/PlatformInfo/platforminfo.cpp \
+    src/Base/Application/qmlbaseapplication.cpp \
+    src/Base/QmlViewer/qmldroidviewer.cpp \
+    src/Base/NodeCommunication/networkmanager.cpp
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 

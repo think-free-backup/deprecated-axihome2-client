@@ -1,6 +1,6 @@
 #include <QApplication>
 
-#include "Application/qmlbaseapplication.h"
+#include "Base/Application/qmlbaseapplication.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -8,7 +8,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     // Instanciate application
 
-    QmlBaseApplication * baseApp = new QmlBaseApplication("qml/on-domo/main.qml");
+    QmlBaseApplication * baseApp = new QmlBaseApplication("qml/on-domo/main.qml","on-domo");
         baseApp->show();
 
     return app.exec();

@@ -1,0 +1,3 @@
+[submodule "src/Base"]
+	path = src/Base
+	url = git@github.com:think-free/nutsy-qt-client.git
