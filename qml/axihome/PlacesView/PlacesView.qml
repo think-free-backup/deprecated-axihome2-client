@@ -12,7 +12,7 @@ Item {
     property string current : list.currentItem.text;
 
     property string places : "";
-    property string moduleAssociation : ""
+    property string deviceAssociation : ""
     property alias index : list.currentIndex;
 
 
@@ -45,7 +45,7 @@ Item {
             width: view.width
             height: view.height
 
-            moduleAssociation: view.moduleAssociation
+            deviceAssociation: view.deviceAssociation
         }
     }
 

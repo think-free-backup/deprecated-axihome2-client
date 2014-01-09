@@ -75,7 +75,7 @@ Device{
 
             onClicked: {
 
-                network.call("domo", "callModule", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[0] + "\", \"255\"");
+                network.call("domo", "callDevice", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[0] + "\", \"255\"");
             }
         }
 
@@ -94,7 +94,7 @@ Device{
 
             onClicked: {
 
-                network.call("domo", "callModule", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[0] + "\", \"0\"");
+                network.call("domo", "callDevice", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[0] + "\", \"0\"");
             }
         }
 

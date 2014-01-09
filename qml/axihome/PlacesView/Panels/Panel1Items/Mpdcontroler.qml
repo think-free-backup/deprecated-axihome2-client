@@ -40,7 +40,7 @@ Device{
 
             onClicked: {
 
-                network.call("domo", "callModule", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[3] + "\", \"0\"");
+                network.call("domo", "callDevice", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[3] + "\", \"0\"");
             }
         }
 
@@ -59,7 +59,7 @@ Device{
 
             onClicked: {
 
-                network.call("domo", "callModule", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[(device.state === "play") ? 1 : 0] + "\", \"0\"");
+                network.call("domo", "callDevice", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[(device.state === "play") ? 1 : 0] + "\", \"0\"");
             }
         }
 
@@ -78,7 +78,7 @@ Device{
 
             onClicked: {
 
-                network.call("domo", "callModule", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[2] + "\", \"0\"");
+                network.call("domo", "callDevice", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[2] + "\", \"0\"");
             }
         }
     }

@@ -186,55 +186,55 @@ Item {
 
     function parse(){
 
-        var jsonStr = (JSON.parse(panel3.model)).modulesAssociation;
+        var jsonStr = (JSON.parse(panel3.model)).devicesAssociation;
 
         for (var k in jsonStr){
 
             var jsPlace = jsonStr[k].place;
             var jsName = jsonStr[k].name;
-            var jsModule = jsonStr[k].module;
+            var jsDevice = jsonStr[k].device;
 
             if (jsPlace === panel3.tab){
 
-                switch(jsModule.split("-")[1]){
+                switch(jsDevice.split("-")[1]){
 
                     case "temperature" :
-                        temperatureItem = jsModule;
+                        temperatureItem = jsDevice;
                         panel3.active = true;
                         break;
 
                     case "humidity":
-                        humidityItem = jsModule;
+                        humidityItem = jsDevice;
                         panel3.active = true;
                         break;
 
                     case "wind_dir":
-                        windDirItem = jsModule;
+                        windDirItem = jsDevice;
                         panel3.active = true;
                         break;
 
                     case "wind_speed":
-                        windSpeedItem = jsModule;
+                        windSpeedItem = jsDevice;
                         panel3.active = true;
                         break;
 
                     case "rain_day":
-                        rainDayItem = jsModule;
+                        rainDayItem = jsDevice;
                         panel3.active = true;
                         break;
 
                     case "pressure":
-                        pressureItem = jsModule;
+                        pressureItem = jsDevice;
                         panel3.active = true;
                         break;
 
                     case "sunrise":
-                        dayItem = jsModule;
+                        dayItem = jsDevice;
                         panel3.active = true;
                         break;
 
                     case "sunset" :
-                        nightItem = jsModule;
+                        nightItem = jsDevice;
                         panel3.active = true;
                         break;
                 }

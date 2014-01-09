@@ -24,7 +24,7 @@ DeviceDetail {
         }
         onValueSet: {
             console.log("Value changed : " + value)
-            network.call("domo", "callModule", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[0] + "\", \"" + value + "\"");
+            network.call("domo", "callDevice", "\"" + device.json.processor + "\", \"" + device.json.pooler + "\", \"" + device.json.type + "\", \"" + device.json.deviceId + "\", \"" + device.json.actuators[0] + "\", \"" + value + "\"");
         }
     }
 }

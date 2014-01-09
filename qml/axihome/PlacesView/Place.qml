@@ -8,7 +8,7 @@ Item {
     id : place
 
     property string text : ""
-    property string moduleAssociation : ""
+    property string deviceAssociation : ""
 
     Item{
 
@@ -29,9 +29,9 @@ Item {
 
             onLoaded: {
 
-                layout.item.p1.model = place.moduleAssociation;
-                layout.item.p2.model = place.moduleAssociation;
-                layout.item.p3.model = place.moduleAssociation;
+                layout.item.p1.model = place.deviceAssociation;
+                layout.item.p2.model = place.deviceAssociation;
+                layout.item.p3.model = place.deviceAssociation;
                 layout.item.p1.tab = place.text;
                 layout.item.p2.tab = place.text;
                 layout.item.p3.tab = place.text;

@@ -33,11 +33,11 @@ Item {
 
         delegate: Loader{
 
-            source : "Panel1Items/" + model.module.split("-")[1] + ".qml"
+            source : "Panel1Items/" + model.device.split("-")[1] + ".qml"
             onLoaded:  {
                 panel1.active = true;
 
-                item.source = model.module
+                item.source = model.device
                 item.name = model.name
 
                 item.listHeight = list.height

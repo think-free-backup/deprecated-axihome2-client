@@ -11,7 +11,7 @@ Rectangle {
     color: "#111"
 
     property string places : variablesModel.systemVariable("places", "").variable;
-    property string moduleAssociation : variablesModel.systemVariable("modulesAssociation", "").variable;
+    property string deviceAssociation : variablesModel.systemVariable("devicesAssociation", "").variable;
 
     property bool portrait : osInfo.orientationPortrait
 
@@ -28,7 +28,7 @@ Rectangle {
         width: parent.width
 
         places : main.places
-        moduleAssociation : main.moduleAssociation
+        deviceAssociation : main.deviceAssociation
     }
 
     SwipeArea {
@@ -134,7 +134,7 @@ Rectangle {
             if (network.logged){
 
                 network.call("domo","getPlaces", "");
-                network.call("domo","getModulesAssociation", "");
+                network.call("domo","getDevicesAssociation", "");
             }
         }
     }
