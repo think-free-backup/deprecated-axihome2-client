@@ -1,5 +1,5 @@
 # Add more folders to ship with the application, here
-folder_01.source = qml/on-domo
+folder_01.source = qml/axihome
 folder_01.target = qml
 DEPLOYMENTFOLDERS = folder_01
 
