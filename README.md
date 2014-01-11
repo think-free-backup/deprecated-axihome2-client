@@ -3,7 +3,7 @@ axihome
 
 Automation Integrated for your house
 
-Client for on-domo-nutsy server written in Qt
+This is a client for axihome-server written in Qt
 
 
 Use with axihome-server
@@ -20,8 +20,8 @@ How to use :
 
 Write a config.ini file in :
 
-- linux : /home/user/.on-domo-qt
-- android : /sdcard/.on-domo-qt
+- linux : /home/user/.axihome
+- android : /sdcard/.axihome
 
 config.ini sample :
 
