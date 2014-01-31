@@ -2,11 +2,13 @@ import QtQuick 2.0
 
 Item{
 
+    id: wRose
     property string text : "0"
     property int  rotation: 0
 
     property string dir : ""
     onDirChanged: {
+
         switch (dir){
             case "N":
                 rotation = 0
@@ -57,6 +59,11 @@ Item{
                 rotation = 337.5
                 break;
         }
+
+        console.log("--------------------------------------------------------------------")
+        console.log(dir)
+        console.log(rotation)
+        console.log("--------------------------------------------------------------------")
     }
 
     property color circle : "#444"
@@ -76,7 +83,9 @@ Item{
         color: parent.circle
         radius: width*0.5
         smooth:true
-        rotation: parent.rotation
+        rotation: wRose.rotation
+
+        onRotationChanged: console.log(rotation)
 
         Rectangle{
 

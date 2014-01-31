@@ -153,7 +153,7 @@ public class TagViewer extends Activity {
             Properties prop = new Properties();
             try {
 
-                prop.load(new FileInputStream(Environment.getExternalStorageDirectory().toString() + "/.on-domo-qt/config.ini"));
+                prop.load(new FileInputStream(Environment.getExternalStorageDirectory().toString() + "/.axihome/config.ini"));
             }
             catch (FileNotFoundException e1) {
 
