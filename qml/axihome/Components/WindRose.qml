@@ -59,11 +59,6 @@ Item{
                 rotation = 337.5
                 break;
         }
-
-        console.log("--------------------------------------------------------------------")
-        console.log(dir)
-        console.log(rotation)
-        console.log("--------------------------------------------------------------------")
     }
 
     property color circle : "#444"
@@ -85,7 +80,9 @@ Item{
         smooth:true
         rotation: wRose.rotation
 
-        onRotationChanged: console.log(rotation)
+        Behavior on rotation  {
+             RotationAnimation { duration: 1000; direction: RotationAnimation.Shortest }
+        }
 
         Rectangle{
 
