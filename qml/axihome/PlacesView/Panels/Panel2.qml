@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import "../../Components"
+import "../../GenericComponants"
 
 /* Panel 2 is the detailled list of items */
 
@@ -34,7 +35,7 @@ Item {
         text : panel2.itemName
     }
 
-    Button{
+    AndroidButton{
 
         id : backBt
 

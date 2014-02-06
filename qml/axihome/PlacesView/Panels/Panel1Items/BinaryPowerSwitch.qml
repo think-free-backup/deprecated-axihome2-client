@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import "../../../Components"
+import "../../../GenericComponants"
 import "../../../Components/Device"
 
 Device{
@@ -35,7 +36,7 @@ Device{
 
     DeviceControl{
 
-        Button{
+        AndroidButton{
 
             id : bt_on
             anchors.right: parent.right
@@ -54,7 +55,7 @@ Device{
             }
         }
 
-        Button{
+        AndroidButton{
 
             id : bt_off
             anchors.right: bt_on.left

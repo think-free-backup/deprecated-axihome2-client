@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import "../Json"
 import "../Components"
+import "../GenericComponants"
 
 Rectangle {
 
@@ -33,7 +34,7 @@ Rectangle {
 
         model: jsonModel.model
 
-        delegate: Button{
+        delegate: AndroidButton{
 
             text: model.name
 

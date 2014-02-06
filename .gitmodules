@@ -1,3 +1,6 @@
 [submodule "src/Base"]
 	path = src/Base
-	url = git@github.com:think-free/nutsy-qt-client.git
+	url = https://github.com/think-free/nutsy-qt-client.git
+[submodule "qml/axihome/GenericComponants"]
+	path = qml/axihome/GenericComponants
+	url = https://github.com/think-free/QmlComponants.git

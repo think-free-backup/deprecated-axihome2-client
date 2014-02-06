@@ -1,11 +1,12 @@
 import QtQuick 2.0
 import "../../../Components"
+import "../../../GenericComponants"
 
 DeviceDetail {
 
     id : device
 
-    Slider{
+    AndroidSlider{
 
         width:parent.height - parent.height / 20
 

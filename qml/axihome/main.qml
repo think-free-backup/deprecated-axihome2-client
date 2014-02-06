@@ -2,6 +2,7 @@ import QtQuick 2.0
 import "Json"
 import "Parts"
 import "Components"
+import "GenericComponants"
 import "PlacesView"
 
 Rectangle {
