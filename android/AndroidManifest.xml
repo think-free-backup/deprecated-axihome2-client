@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<manifest package="org.thinkfree.axihome" android:versionCode="1" android:installLocation="auto" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.14">
-    <application android:name="org.qtproject.qt5.android.bindings.QtApplication" android:icon="@drawable/icon" android:label="@string/app_name">
+<manifest android:versionName="1.15" xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:installLocation="auto" package="org.thinkfree.axihome">
+    <application android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="@string/app_name" android:icon="@drawable/icon">
         <!-- Main view -->
-        <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|locale|fontScale|keyboard|keyboardHidden|navigation" android:name="org.thinkfree.QtServiceActivity" android:theme="@style/AppTheme" android:label="Axihome" android:screenOrientation="landscape" android:launchMode="singleInstance">
+        <activity android:name="org.thinkfree.QtServiceActivity" android:label="Axihome" android:launchMode="singleInstance" android:theme="@style/AppTheme" android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|locale|fontScale|keyboard|keyboardHidden|navigation" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
