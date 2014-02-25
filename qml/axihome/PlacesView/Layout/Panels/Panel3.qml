@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import "../../Components"
+import "../../../Components"
 
 /* Panel 3 is the weather and scenaries panel */
 
@@ -27,8 +27,8 @@ Item {
         anchors.left: parent.left
         anchors.leftMargin: 20
 
-        text : JSON.parse(variablesModel.requestSystemVariable(parent.windSpeedItem, "").variable).values[0].value
-        dir : JSON.parse(variablesModel.requestSystemVariable(parent.windDirItem, "").variable).values[0].value
+        text : JSON.parse(variablesModel.requestSystemVariable(parent.windSpeedItem, "").variable).values[0]
+        dir : JSON.parse(variablesModel.requestSystemVariable(parent.windDirItem, "").variable).values[0]
 
         visible : parent.windSpeedItem !== "" || parent.windDirItem !== ""
     }
@@ -46,7 +46,7 @@ Item {
         anchors.leftMargin: if (wind.visible) parent.width / 2 + width / 10; else parent.width / 2;
         anchors.top: parent.top
         anchors.topMargin: 20
-        text : JSON.parse(variablesModel.requestSystemVariable(parent.temperatureItem, "").variable).values[0].value + " ºC"
+        text : JSON.parse(variablesModel.requestSystemVariable(parent.temperatureItem, "").variable).values[0] + " ºC"
         visible : temperatureItem !== ""
     }
 
@@ -66,7 +66,7 @@ Item {
         icon:"humidity"
 
         textFontSize: parent.width/20
-        value: JSON.parse(variablesModel.requestSystemVariable(parent.humidityItem, "").variable).values[0].value
+        value: JSON.parse(variablesModel.requestSystemVariable(parent.humidityItem, "").variable).values[0]
 
         unitFontSize: if (parent.width/40 > 15) parent.width/40; else textFontSize;
         unit : "%"
@@ -90,7 +90,7 @@ Item {
         icon:"pressure"
 
         textFontSize: parent.width/20
-        value: JSON.parse(variablesModel.requestSystemVariable(parent.pressureItem, "").variable).values[0].value
+        value: JSON.parse(variablesModel.requestSystemVariable(parent.pressureItem, "").variable).values[0]
 
         unitFontSize: if (parent.width/40 > 15) parent.width/40; else textFontSize;
         unit : "hpa"
@@ -114,7 +114,7 @@ Item {
         icon:"rain"
 
         textFontSize: parent.width/20
-        value: JSON.parse(variablesModel.requestSystemVariable(parent.rainDayItem, "").variable).values[0].value
+        value: JSON.parse(variablesModel.requestSystemVariable(parent.rainDayItem, "").variable).values[0]
 
         unitFontSize: if (parent.width/40 > 15) parent.width/40; else textFontSize;
         unit : "mm"
@@ -136,7 +136,7 @@ Item {
         icon:"day"
 
         textFontSize: parent.width/30
-        value: JSON.parse(variablesModel.requestSystemVariable(parent.dayItem, "").variable).values[0].value
+        value: JSON.parse(variablesModel.requestSystemVariable(parent.dayItem, "").variable).values[0]
 
         unitFontSize: 0
         unit : ""
@@ -159,7 +159,7 @@ Item {
         icon:"night"
 
         textFontSize: parent.width/30
-        value: JSON.parse(variablesModel.requestSystemVariable(parent.nightItem, "").variable).values[0].value
+        value: JSON.parse(variablesModel.requestSystemVariable(parent.nightItem, "").variable).values[0]
 
         unitFontSize: 0
         unit : ""

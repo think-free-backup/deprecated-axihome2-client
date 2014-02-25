@@ -1,13 +1,13 @@
 import QtQuick 2.0
-import "../../../Components"
-import "../../../GenericComponants"
-import "../../../Components/Device"
+import "../../../../Components"
+import "../../../../GenericComponants"
+import "../../../../Components/Device"
 
 Device{
 
     id : device
 
-    property int percent : device.json.values[0].level //Math.floor((device.json.values[0].level / 255) * 100) ;
+    property int percent : device.json.values[0] //Math.floor((device.json.values[0].level / 255) * 100) ;
 
     DeviceState{
 
@@ -38,7 +38,7 @@ Device{
             height: 2* (parent.height/3)
             width: 2* (parent.height/3)
 
-            source : "../../../Images/bulb-off.png"
+            source : "../../../../Images/bulb-off.png"
         }
 
         Image{
@@ -49,7 +49,7 @@ Device{
             height: 2* (parent.height/3)
             width: 2* (parent.height/3)
 
-            source : "../../../Images/bulb-on.png"
+            source : "../../../../Images/bulb-on.png"
 
             opacity : percent / 100
         }

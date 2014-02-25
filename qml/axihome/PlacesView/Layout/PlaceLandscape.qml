@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import "../Panels"
+import "Panels"
 
 Item{
 

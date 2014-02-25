@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import "../../Json"
+import "../../../Json"
 
 /* Panel 1 is the main list of items */
 

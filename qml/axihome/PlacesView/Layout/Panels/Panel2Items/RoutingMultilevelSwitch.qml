@@ -1,6 +1,6 @@
 import QtQuick 2.0
-import "../../../Components"
-import "../../../GenericComponants"
+import "../../../../Components"
+import "../../../../GenericComponants"
 
 DeviceDetail {
 

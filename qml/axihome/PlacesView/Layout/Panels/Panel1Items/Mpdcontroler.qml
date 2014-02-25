@@ -1,7 +1,7 @@
 import QtQuick 2.0
-import "../../../Components"
-import "../../../GenericComponants"
-import "../../../Components/Device"
+import "../../../../Components"
+import "../../../../GenericComponants"
+import "../../../../Components/Device"
 
 Device{
 
@@ -19,7 +19,7 @@ Device{
             height: 2* (parent.height/3)
             fillMode: Image.PreserveAspectFit
 
-            source : "../../../Images/note.png"
+            source : "../../../../Images/note.png"
         }
     }
 

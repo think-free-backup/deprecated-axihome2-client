@@ -1,7 +1,7 @@
 import QtQuick 2.0
-import "../../../Components"
-import "../../../GenericComponants"
-import "../../../Components/Device"
+import "../../../../Components"
+import "../../../../GenericComponants"
+import "../../../../Components/Device"
 
 Device{
 
@@ -17,7 +17,7 @@ Device{
             height: 2* (parent.height/3)
             width: 2* (parent.height/3)
 
-            source : "../../../Images/bulb-off.png"
+            source : "../../../../Images/bulb-off.png"
         }
 
         Image{
@@ -28,9 +28,9 @@ Device{
             height: 2* (parent.height/3)
             width: 2* (parent.height/3)
 
-            source : "../../../Images/bulb-on.png"
+            source : "../../../../Images/bulb-on.png"
 
-            opacity : (device.json.values[0].state / 255)
+            opacity : (device.json.values[0] / 255)
         }
     }
 
