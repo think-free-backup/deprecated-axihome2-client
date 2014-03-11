@@ -9,6 +9,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     // Instanciate application
 
     QmlBaseApplication * baseApp = new QmlBaseApplication("qml/axihome/main.qml","axihome");
+        baseApp->setPackage("org/thinkfree/AxihomeService");
         baseApp->show();
 
     return app.exec();

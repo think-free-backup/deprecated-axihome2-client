@@ -16,36 +16,16 @@ import android.view.WindowManager;
 public class QtServiceActivity extends QtActivity
 {
     private ActivityInfo m_activityInfo = null;
-
-    private int loadService()
-    {
-        int retVal = -1;
-        Log.w("Qt", "loadService");
-        try
-        {
-            Intent i = new Intent(this, QtService.class);
-            i.putExtra(QtService.EXTRA_MESSAGE, "Loading " + m_activityInfo.metaData.getString("android.app.lib_name"));
-            ComponentName cn = startService(i);
-            retVal = 0;
-        }
-        catch (Exception e)
-        {
-            Log.e("Qt", "Can't create service" + e);
-        }
-
-        return retVal;
-    }
+    private Class m_class = QtService.class;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-
-
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         super.onCreate(savedInstanceState);
-        
+
         try {
             m_activityInfo = getPackageManager().getActivityInfo(getComponentName(), PackageManager.GET_META_DATA);
         } 
@@ -56,5 +36,29 @@ public class QtServiceActivity extends QtActivity
         }
         
         loadService();
+    }
+
+    public void setServiceClass(Class cl){
+
+        m_class = cl;
+    }
+
+    private int loadService()
+    {
+        int retVal = -1;
+        Log.w("Qt", "loadService");
+        try
+        {
+            Intent i = new Intent(this, m_class);
+            i.putExtra(QtService.EXTRA_MESSAGE, "Loading " + m_activityInfo.metaData.getString("android.app.lib_name"));
+            ComponentName cn = startService(i);
+            retVal = 0;
+        }
+        catch (Exception e)
+        {
+            Log.e("Qt", "Can't create service" + e);
+        }
+
+        return retVal;
     }
 }

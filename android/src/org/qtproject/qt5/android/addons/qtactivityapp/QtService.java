@@ -1,17 +1,26 @@
 package org.qtproject.qt5.android.addons.qtactivityapp;
 
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import dalvik.system.DexClassLoader;
+
+import android.annotation.SuppressLint;
 import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
-import android.content.Intent;
-import android.os.IBinder;
-import android.util.Log;
-
-import android.content.pm.PackageItemInfo;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ServiceInfo;
-import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.IBinder;
+import android.util.Log;
+import android.os.Process;
+import android.widget.Toast;
 
 public class QtService extends Service
 {
@@ -19,80 +28,97 @@ public class QtService extends Service
 
     private boolean isRunning=false;
     private ComponentName myService;
+    private Class m_class = QtServiceActivity.class;
+
+    private static ServiceInfo m_serviceInfo = null;
+    private static NotificationManager m_notificationManager;
+    private static Notification.Builder m_builder;
+    private static QtService m_instance;
+    private static String m_lib_name;
+    private static PendingIntent pi;
 
     /* Event handling */
 
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId)
-    {
-        if(!isRunning)
-        {
-            myService = new ComponentName(this, this.getClass());
-            String message = intent.getStringExtra(EXTRA_MESSAGE);
-            start(message);
+    public void onCreate (){
+
+        Log.w(getClass().getName(), "Service created ...");
+
+        m_instance = this;
+
+        try{
+            ComponentName myService = new ComponentName(this, this.getClass());
+            m_serviceInfo = getPackageManager().getServiceInfo(myService, PackageManager.GET_META_DATA);
+            m_lib_name = splitCamelCase (m_serviceInfo.metaData.getString("android.app.lib_name"));
         }
+        catch (Exception e) {
+
+            e.printStackTrace();
+        }
+    }
+
+    public IBinder onBind(Intent intent){
+
+        return(null);
+    }
+
+    public int onStartCommand(Intent intent, int flags, int startId){
+
+        /* Notifiication */
+
+        Notification note=new Notification(m_serviceInfo.metaData.getInt("android.app.notificon"),"",System.currentTimeMillis());
+
+        Intent i=new Intent(m_instance, m_class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+        pi=PendingIntent.getActivity(this, 0,
+                                i, 0);
+
+        note.setLatestEventInfo(this, m_lib_name ,
+            "Running",
+            pi);
+        note.flags|=Notification.FLAG_NO_CLEAR;
+
+        startForeground(1338, note);
+
+        /* Return */
 
         return(START_STICKY);
     }
 
-    @Override
-    public void onDestroy()
-    {
-        stop();
+    public void onDestroy(){
+
+        Log.w(getClass().getName(), "Service destroyed ...");
+
+        Process.killProcess(Process.myPid());
     }
 
-    @Override
-    public IBinder onBind(Intent intent)
-    {
-        return(null);
+    /* Activity class */
+
+    public void setActivityClass(Class cl){
+
+        m_class = cl;
     }
 
-    /* Start stop service */
+    /* Notification methods */
 
-    private void start(String message)
-    {
-        if (!isRunning)
-        {
-            Log.w(getClass().getName(), "Service is running..");
-            isRunning = true;
+    public static void notify(String s){
 
-            try
-            {
-                Bundle data = getPackageManager().getServiceInfo(myService, PackageManager.GET_META_DATA).metaData;
+        Log.w("Qt", "Notify : " + s );
 
-                Notification note = new Notification(data.getInt("android.app.notificon"),
-                    message,
-                    System.currentTimeMillis());
+        if (m_notificationManager == null) {
 
-                Intent i = new Intent(this, QtServiceActivity.class);
-
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-
-                PendingIntent pi = PendingIntent.getActivity(this, 0, i, 0);
-
-                note.setLatestEventInfo(this, splitCamelCase(data.getString("android.app.name")),
-                                      "Running",
-                                      pi);
-                note.flags |= Notification.FLAG_NO_CLEAR;
-
-                startForeground(1338, note);
-
-            }
-            catch(Exception e)
-            {
-                e.printStackTrace();
-            }
+            m_notificationManager = (NotificationManager)m_instance.getSystemService(Context.NOTIFICATION_SERVICE);
+            m_builder = new Notification.Builder(m_instance);
+            m_builder.setSmallIcon(m_serviceInfo.metaData.getInt("android.app.notificon"));
+            m_builder.setContentTitle(m_lib_name);
+            m_builder.setContentIntent(pi);
         }
-  }
 
-    private void stop()
-    {
-        if (isRunning)
-        {
-            Log.w(getClass().getName(), "Stopping!");
-            isRunning=false;
-            stopForeground(true);
-        }
+        m_builder.setContentText(s);
+        Notification note = m_builder.build();
+        note.flags |= Notification.FLAG_NO_CLEAR;
+
+        m_notificationManager.notify(1338, note);
     }
 
     /* Helper classes */

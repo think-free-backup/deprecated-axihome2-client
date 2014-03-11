@@ -13,7 +13,7 @@
             <meta-data android:name="android.app.fatal_error_msg" android:value="@string/fatal_error_msg"/>
             <meta-data android:name="android.app.notificon" android:resource="@drawable/notificon"/>
         </service>
-        <activity android:name=".qtserviceapp.QtServiceLoaderActivity" android:process=":QtServiceLoaderActivity">
+        <activity android:name=".qtserviceapp.QtServiceActivity" android:process=":QtServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
