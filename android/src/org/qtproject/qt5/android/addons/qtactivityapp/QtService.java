@@ -1,18 +1,4 @@
-/***
-  Copyright (c) 2008-2012 CommonsWare, LLC
-  Licensed under the Apache License, Version 2.0 (the "License"); you may not
-  use this file except in compliance with the License. You may obtain	a copy
-  of the License at http://www.apache.org/licenses/LICENSE-2.0. Unless required
-  by applicable law or agreed to in writing, software distributed under the
-  License is distributed on an "AS IS" BASIS,	WITHOUT	WARRANTIES OR CONDITIONS
-  OF ANY KIND, either express or implied. See the License for the specific
-  language governing permissions and limitations under the License.
-
-  From _The Busy Coder's Guide to Android Development_
-    http://commonsware.com/Android
-*/
-
-package org.thinkfree;
+package org.qtproject.qt5.android.addons.qtactivityapp;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -33,6 +19,8 @@ public class QtService extends Service
 
     private boolean isRunning=false;
     private ComponentName myService;
+
+    /* Event handling */
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId)
@@ -59,6 +47,8 @@ public class QtService extends Service
         return(null);
     }
 
+    /* Start stop service */
+
     private void start(String message)
     {
         if (!isRunning)
@@ -80,7 +70,7 @@ public class QtService extends Service
 
                 PendingIntent pi = PendingIntent.getActivity(this, 0, i, 0);
 
-                note.setLatestEventInfo(this, data.getString("android.app.name"),
+                note.setLatestEventInfo(this, splitCamelCase(data.getString("android.app.name")),
                                       "Running",
                                       pi);
                 note.flags |= Notification.FLAG_NO_CLEAR;
@@ -103,5 +93,21 @@ public class QtService extends Service
             isRunning=false;
             stopForeground(true);
         }
+    }
+
+    /* Helper classes */
+
+    static String splitCamelCase(String sp) {
+
+        String s = Character.toUpperCase(sp.charAt(0)) + sp.substring(1);
+
+        return s.replaceAll(
+          String.format("%s|%s|%s",
+             "(?<=[A-Z])(?=[A-Z][a-z])",
+             "(?<=[^A-Z])(?=[A-Z])",
+             "(?<=[A-Za-z])(?=[^A-Za-z])"
+          ),
+          " "
+       );
     }
 }

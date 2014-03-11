@@ -36,15 +36,6 @@
             <meta-data android:resource="@drawable/notificon" android:name="android.app.notificon"/>
             <meta-data android:value="@string/app_name" android:name="android.app.name"/>
         </service>
-        <!-- NFC -->
-        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name="org.thinkfree.NFC.TagViewer">
-            <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="text/plain"/>
-            </intent-filter>
-            <meta-data android:value="" android:name="@string/app_name"/>
-        </activity>
     </application>
     <uses-sdk android:targetSdkVersion="14" android:minSdkVersion="14"/>
     <supports-screens android:normalScreens="true" android:anyDensity="true" android:smallScreens="true" android:largeScreens="true"/>

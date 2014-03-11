@@ -1,4 +1,4 @@
-package org.thinkfree;
+package org.qtproject.qt5.android.addons.qtactivityapp;
 
 import org.qtproject.qt5.android.bindings.QtActivity;
 

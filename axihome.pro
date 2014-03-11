@@ -51,8 +51,8 @@ ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
 OTHER_FILES += \
     android/AndroidManifest.xml \
-    android/src/org/thinkfree/QtServiceActivity.java \
-    android/src/org/thinkfree/QtService.java \
+    android/src/org/qtproject/qt5/android/addons/qtactivityapp/QtServiceActivity.java \
+    android/src/org/qtproject/qt5/android/addons/qtactivityapp/QtService.java \
     android/src/org/thinkfree/NFC/NdefMessageParser.java \
     android/src/org/thinkfree/NFC/TagViewer.java \
     android/src/org/thinkfree/NFC/record/ParsedNdefRecord.java \
