@@ -78,7 +78,7 @@ public class QtService extends Service
             pi);
         note.flags|=Notification.FLAG_NO_CLEAR;
 
-        startForeground(1338, note);
+        startForeground(1337, note);
 
         /* Return */
 
@@ -103,8 +103,6 @@ public class QtService extends Service
 
     public static void notify(String s){
 
-        Log.w("Qt", "Notify : " + s );
-
         if (m_notificationManager == null) {
 
             m_notificationManager = (NotificationManager)m_instance.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -118,7 +116,7 @@ public class QtService extends Service
         Notification note = m_builder.build();
         note.flags |= Notification.FLAG_NO_CLEAR;
 
-        m_notificationManager.notify(1338, note);
+        m_notificationManager.notify(1337, note);
     }
 
     /* Helper classes */
