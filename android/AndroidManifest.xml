@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<manifest android:versionCode="1" package="org.thinkfree" android:versionName="1.23" xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
-    <application android:label="@string/app_name" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:icon="@drawable/icon">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:installLocation="auto" package="org.thinkfree.axihome" android:versionName="1.27">
+    <application android:name="org.qtproject.qt5.android.bindings.QtApplication" android:icon="@drawable/icon" android:label="@string/app_name">
         <!-- Main view -->
-        <activity android:screenOrientation="landscape" android:theme="@style/AppTheme" android:label="@string/app_name" android:name=".AxihomeActivity" android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|locale|fontScale|keyboard|keyboardHidden|navigation" android:launchMode="singleInstance">
+        <activity android:theme="@style/AppTheme" android:name=".AxihomeActivity" android:label="@string/app_name" android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|locale|fontScale|keyboard|keyboardHidden|navigation" android:launchMode="singleInstance" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -32,7 +32,7 @@
             <!-- Splash screen -->
         </activity>
         <!-- Notification -->
-        <service android:label="@string/app_name" android:name=".AxihomeService">
+        <service android:name=".AxihomeService" android:label="@string/app_name">
             <meta-data android:resource="@drawable/notificon" android:name="android.app.notificon"/>
             <meta-data android:value="@string/app_name" android:name="android.app.lib_name"/>
         </service>

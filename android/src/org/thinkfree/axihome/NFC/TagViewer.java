@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.thinkfree.NFC;
+package org.thinkfree.axihome.NFC;
 
 import android.app.Activity;
 import android.content.Context;
@@ -27,7 +27,7 @@ import android.os.Environment;
 import android.os.Parcelable;
 import android.util.Log;
 
-import org.thinkfree.NFC.record.ParsedNdefRecord;
+import org.thinkfree.axihome.NFC.record.ParsedNdefRecord;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

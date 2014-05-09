@@ -1,4 +1,4 @@
-package org.thinkfree;
+package org.thinkfree.axihome;
 
 import org.qtproject.qt5.android.addons.qtactivityapp.QtServiceActivity;
 import org.qtproject.qt5.android.addons.qtactivityapp.QtService;

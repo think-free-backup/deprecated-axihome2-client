@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.thinkfree.NFC.record;
+package org.thinkfree.axihome.NFC.record;
 
 public interface ParsedNdefRecord {
     public String getText();

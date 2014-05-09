@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.thinkfree.NFC.record;
+package org.thinkfree.axihome.NFC.record;
 
 import android.nfc.FormatException;
 import android.nfc.NdefMessage;
@@ -24,7 +24,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Iterables;
 
-import org.thinkfree.NFC.NdefMessageParser;
+import org.thinkfree.axihome.NFC.NdefMessageParser;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.thinkfree.NFC.record;
+package org.thinkfree.axihome.NFC.record;
 
 import android.net.Uri;
 import android.nfc.NdefRecord;

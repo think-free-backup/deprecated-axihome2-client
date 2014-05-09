@@ -24,28 +24,28 @@ qtcAddDeployment()
 HEADERS += \
     src/Base/VariableModel/systemvariable.h \
     src/Base/VariableModel/variablemodelmanager.h \
-    src/Base/NodeCommunication/nodejscommunication.h \
-    src/Base/NodeCommunication/heartbeatmanager.h \
+    src/Base/Communication/jsoncommunication.h \
+    src/Base/Communication/heartbeatmanager.h \
     src/Base/Log/log.h \
     src/Base/ShortCut/shortcut.h \
     src/Base/PlatformInfo/platforminfo.h \
     src/Base/Application/qmlbaseapplication.h \
     src/Base/QmlViewer/qmldroidviewer.h \
-    src/Base/NodeCommunication/networkmanager.h
+    src/Base/Communication/networkmanager.h
 
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += \
     src/main.cpp \
     src/Base/VariableModel/systemvariable.cpp \
     src/Base/VariableModel/variablemodelmanager.cpp \
-    src/Base/NodeCommunication/nodejscommunication.cpp \
-    src/Base/NodeCommunication/heartbeatmanager.cpp \
+    src/Base/Communication/jsoncommunication.cpp \
+    src/Base/Communication/heartbeatmanager.cpp \
     src/Base/Log/log.cpp \
     src/Base/ShortCut/shortcut.cpp \
     src/Base/PlatformInfo/platforminfo.cpp \
     src/Base/Application/qmlbaseapplication.cpp \
     src/Base/QmlViewer/qmldroidviewer.cpp \
-    src/Base/NodeCommunication/networkmanager.cpp
+    src/Base/Communication/networkmanager.cpp
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 

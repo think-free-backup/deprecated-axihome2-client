@@ -13,15 +13,15 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.thinkfree.NFC;
+package org.thinkfree.axihome.NFC;
 
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 
-import org.thinkfree.NFC.record.ParsedNdefRecord;
-import org.thinkfree.NFC.record.SmartPoster;
-import org.thinkfree.NFC.record.TextRecord;
-import org.thinkfree.NFC.record.UriRecord;
+import org.thinkfree.axihome.NFC.record.ParsedNdefRecord;
+import org.thinkfree.axihome.NFC.record.SmartPoster;
+import org.thinkfree.axihome.NFC.record.TextRecord;
+import org.thinkfree.axihome.NFC.record.UriRecord;
 
 import java.util.ArrayList;
 import java.util.List;
